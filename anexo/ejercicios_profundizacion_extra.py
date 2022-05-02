@@ -46,6 +46,11 @@ Descripción del dataset "ventas.csv"
 '''
 
 
+import csv
+import matplotlib.pyplot as plt
+import numpy as np
+from sqlalchemy import true
+
 def ej1():
     print('Comenzamos a divertirnos!')
 
@@ -93,7 +98,19 @@ def ej1():
     y = mes_1[:, 2]
 
     '''
+    with open('ventas.csv', 'r') as csvfile:
+        datos_ventas = list(csv.DictReader(csvfile)) 
+        ventas_filtro_mes = [i for i in datos_ventas if i['Mes'] == '1']
+        
+        dias_x = [i['Dia'] for i in ventas_filtro_mes]
+        ventas_y = [int(i['Alimentos']) for i in ventas_filtro_mes]
 
+        plt.plot(dias_x, ventas_y, color='red', marker='o')
+        plt.title('Evolucion de las Ventas de alimentos en 30 dias', fontsize=14)
+        plt.xlabel('Días', fontsize=14)
+        plt.ylabel('Importe Facturado (Alimentos)', fontsize=14)
+        plt.grid(True)
+        plt.show()
 
 def ej2():
     print('Comenzamos a ponernos serios!')
@@ -121,7 +138,7 @@ def ej2():
     plot(tendencia)
 
     '''
-
+    np.diff()
 
 def ej3():
     print("Buscando la tendencia")
@@ -187,8 +204,8 @@ def ej5():
 
 if __name__ == '__main__':
     print("Ejercicios de práctica")
-    ej1()
-    # ej2()
+    # ej1()
+    ej2()
     # ej3()
     # ej4()
     # ej5()

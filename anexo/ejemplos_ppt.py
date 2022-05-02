@@ -75,7 +75,7 @@ def multi_plot():
 
     ax1.plot(x, np.sin(x), color='b', marker='^', label='y=sin(x)')
     ax1.set_facecolor('whitesmoke')
-    ax1.set_title("Senoidal1")
+    ax1.set_title("Senoidal 1")
     ax1.set_ylabel("Y[amplitud]")
     ax1.set_xlabel("X[rads]")
     ax1.set_xlim([0, 4*np.pi])

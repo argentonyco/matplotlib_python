@@ -80,14 +80,14 @@ def scatter_plot():
     fig = plt.figure()
     fig.suptitle('Line vs Scatter', fontsize=16)
     ax1 = fig.add_subplot(1, 2, 1)
-    ax2 = fig.add_subplot(1, 2, 2)
+    # ax2 = fig.add_subplot(1, 2, 2)
 
     ax1.plot(x, y, c='darkcyan')
     ax1.set_facecolor('whitesmoke')
     ax1.grid('solid')
-    ax2.scatter(x, y, c='darkcyan')
-    ax2.set_facecolor('whitesmoke')
-    ax2.grid('solid')
+    # ax2.scatter(x, y, c='darkcyan')
+    # ax2.set_facecolor('whitesmoke')
+    # ax2.grid('solid')
     plt.show()
 
     np.random.shuffle(x)  # Mezclar valores de X
@@ -332,11 +332,11 @@ def file_plot():
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     # ---------------- Tipos de gráficos ---------------- #
-    line_plot()
+    # line_plot()
     scatter_plot()
-    bar_plot()
-    pie_plot()
-    # --------------------------------------------------- # 
-    # Bonus track
-    file_plot()
-    cursores()
+    # bar_plot()
+    # pie_plot()
+    # # --------------------------------------------------- # 
+    # # Bonus track
+    # file_plot()
+    # cursores()
